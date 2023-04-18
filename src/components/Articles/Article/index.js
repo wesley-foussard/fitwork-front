@@ -88,7 +88,7 @@ function Article() {
             <Card.Title className="Article-title">{article.title}</Card.Title>
             <Card.Img src={`${process.env.REACT_APP_BASE_URL}/article/${article.id}/image`} className="Article-image" />
             <Card.Text className="Article-description">
-              {article.description}
+              Durée de l'activité : {!article.time ? 'à ta convenance !' : (!article.time.minutes ? `${article.time.seconds} seconde(s)` : `${article.time.minutes} minutes(s)`) }
             </Card.Text>
             <ButtonGroup className="Article-button" aria-label="Ajouter l'article">
               <Button

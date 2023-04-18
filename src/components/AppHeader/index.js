@@ -58,9 +58,14 @@ function Header() {
                 </NavDropdown>
                 <Nav.Link eventKey="Program" as={NavLink} to="/programme">Programme</Nav.Link>
                 <Nav.Link eventKey="Fav" as={NavLink} to="/favoris">Favoris</Nav.Link>
-                {roleUser === 'admin' && (
-                <Nav.Link eventKey="Admin" as={NavLink} to="/administrateur">Administrateur</Nav.Link>)}
-
+                {roleUser === 'coach' && (
+                <Nav.Link eventKey="Admin" as={NavLink} to="/administrateur">Gérer les articles</Nav.Link>)}
+                <Nav.Item>
+                  <Nav.Link eventKey="Contact" as={NavLink} to="/contact">Contact</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link eventKey="About" as={NavLink} to="/a-propos">A propos</Nav.Link>
+                </Nav.Item>
               </>
             )}
             {/* quand on est connecté ça affiche s'inscrire seulement */}
