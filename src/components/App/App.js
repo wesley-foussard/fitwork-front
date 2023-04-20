@@ -20,6 +20,7 @@ import Page from '../../page';
 import Favoris from '../Favorite';
 import About from '../about';
 import ModifyArticle from '../Admin/AdminArticles/ModifyArticle';
+import About from '../About';
 
 import { fetchCategories } from '../../actions/categories';
 

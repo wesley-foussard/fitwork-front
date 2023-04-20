@@ -15,6 +15,10 @@
         flex-wrap: wrap;
         justify-content: center;
     }
+
+    &-photo{
+        height: 15rem;
+    }
     &-card{
         display: flex;
         justify-content: center;
@@ -43,4 +47,9 @@
                 position: absolute;
     }
 }
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: all 0.4s;
 }

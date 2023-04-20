@@ -1,7 +1,8 @@
+/* eslint-disable no-nested-ternary */
 /* eslint-disable react/jsx-no-bind */
 import './style.scss';
 
-import { NavLink, useParams } from 'react-router-dom';
+import { NavLink, useParams, Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
@@ -172,7 +173,7 @@ function Articles() {
           {articles.map((article) => (
             <article key={article.id} className="Articles-card">
               <Card style={{ width: '18rem', height: '25rem' }}>
-                <Card.Img variant="top" src={`${process.env.REACT_APP_BASE_URL}/article/${article.id}/image`} />
+                <Card.Img className="Articles-photo" variant="top" src={`${process.env.REACT_APP_BASE_URL}/article/${article.id}/image`} />
                 <Card.Body>
                   <Card.Title as={NavLink} to={`/article/${article.id}`} className="Articles-card-title">{article.title}</Card.Title>
                   <Card.Text className="Articles-card-description">
